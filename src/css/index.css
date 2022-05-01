@@ -1,0 +1,25 @@
+@import './normalize.css';
+
+body {
+	background-color: #282c34;
+	color: white;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	font-size: calc(10px + 2vmin);
+	justify-content: center;
+	min-height: 100vh;
+	text-align: center;
+}
+
+button {
+	font-size: calc(10px + 2vmin);
+}
