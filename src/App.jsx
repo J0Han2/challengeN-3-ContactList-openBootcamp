@@ -1,8 +1,13 @@
+import { ContactList } from './components'
+
 function App() {
 	return (
-		<div className='app'>
-			<h1>app</h1>
-		</div>
+		<main className='app'>
+			<header>
+				<h1>Contact List </h1>
+			</header>
+			<ContactList />
+		</main>
 	)
 }
 
