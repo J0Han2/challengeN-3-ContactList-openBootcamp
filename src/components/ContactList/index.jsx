@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import Contact from '../Contact'
 import Form from '../Form'
+import Contact from '../Contact'
+import { ContainerList } from './ListStyles'
 
 function List() {
 	const [contactList, setContactList] = useState([])
@@ -19,12 +20,12 @@ function List() {
 	}
 
 	return (
-		<div>
+		<ContainerList>
 			<Form addContact={addNewContact} />
 			{contactList.length === 0 ? (
-				<p>Not contacts</p>
+				<p className='message-default'>Not contacts</p>
 			) : (
-				<section>
+				<ul>
 					{contactList.map(contactInfo => (
 						<Contact
 							contactInfo={contactInfo}
@@ -33,9 +34,9 @@ function List() {
 							toggle={toggleConnected}
 						/>
 					))}
-				</section>
+				</ul>
 			)}
-		</div>
+		</ContainerList>
 	)
 }
 

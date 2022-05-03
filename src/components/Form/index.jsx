@@ -1,7 +1,8 @@
-import PropTypes from 'prop-types'
 import { useState } from 'react'
-import generatorID from '../../constants/generatorID'
+import PropTypes from 'prop-types'
 import { ContactInfo } from '../../models'
+import { FormContact } from './FormStyles'
+import generatorID from '../../constants/generatorID'
 
 const initialContactInfo = {
 	firstName: '',
@@ -41,7 +42,7 @@ function Form({ addContact }) {
 	}
 
 	return (
-		<form onSubmit={handleSubmit}>
+		<FormContact onSubmit={handleSubmit}>
 			<input
 				name='firstName'
 				placeholder='First Name...'
@@ -59,11 +60,12 @@ function Form({ addContact }) {
 			<input
 				type='email'
 				name='contactEmail'
+				placeholder='Email Address...'
 				value={contactEmail}
 				onChange={handleChange}
 			/>
 			<button type='submit'>Add Contact</button>
-		</form>
+		</FormContact>
 	)
 }
 

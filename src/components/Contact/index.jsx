@@ -16,15 +16,14 @@ function Contact({ contactInfo, delContact, toggle }) {
 
 	return (
 		<li>
-			<div>
-				<span>{firstName}</span>
-				<span>{lastName}</span>
-			</div>
+			<p>
+				{firstName} {lastName}
+			</p>
 			<p>{email}</p>
-			<button onClick={handleConnected}>
+			<button className='btn btn-toggle' onClick={handleConnected}>
 				{connected ? 'online 🟢' : 'offline 🔴'}
 			</button>
-			<button onClick={handleDelete}>❌</button>
+			<button className='btn btn-remove' onClick={handleDelete}>❌</button>
 		</li>
 	)
 }
